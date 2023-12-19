@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
+    <link rel="icon" href="./src/img/logo2.png" sizes="16x16">
+    <title>Welcome to our minecraft server!</title>
+    <style>
+        .bg {
+            -webkit-animation-name: bg;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-delay: 3s;
+            /* animation属性 兼容性适配 */
+            animation-name: bg;
+            animation-duration: 1s;
+            animation-delay: 3s;
+
+        }
+
+        @-webkit-keyframes bg {
+            from {
+                opacity: 1
+            }
+
+            to {
+                opacity: 0
+            }
+        }
+
+        @keyframes bg {
+            from {
+                opacity: 1
+            }
+
+            to {
+                opacity: 0
+            }
+        }
+
+        .logo {
+            -webkit-animation-name: logo;
+            -webkit-animation-duration: 4s;
+            -webkit-animation-delay: 4s;
+            /* animation属性 兼容性适配 */
+            animation-name: logo;
+            animation-duration: 4s;
+            animation-delay: 4s;
+
+            display: contents;
+
+        }
+
+        @-webkit-keyframes logo {
+            from {
+                opacity: 0
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes logo {
+            from {
+                opacity: 0
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+    </style>
+
+    <script>
+
+        function hideImage() {
+            document.getElementById("welcome").style.display = "none";
+        }
+
+        /* 以下代码由Dreamweaver生成*/
+        function MM_swapImgRestore() { //v3.0
+            var i, x, a = document.MM_sr; for (i = 0; a && i < a.length && (x = a[i]) && x.oSrc; i++) x.src = x.oSrc;
+        }
+
+        function MM_preloadImages() { //v3.0
+            var d = document; if (d.images) {
+                if (!d.MM_p) d.MM_p = new Array();
+                var i, j = d.MM_p.length, a = MM_preloadImages.arguments; for (i = 0; i < a.length; i++)
+                    if (a[i].indexOf("#") != 0) { d.MM_p[j] = new Image; d.MM_p[j++].src = a[i]; }
+            }
+        }
+
+        function MM_findObj(n, d) { //v4.01
+            var p, i, x; if (!d) d = document; if ((p = n.indexOf("?")) > 0 && parent.frames.length) {
+                d = parent.frames[n.substring(p + 1)].document; n = n.substring(0, p);
+            }
+            if (!(x = d[n]) && d.all) x = d.all[n]; for (i = 0; !x && i < d.forms.length; i++) x = d.forms[i][n];
+            for (i = 0; !x && d.layers && i < d.layers.length; i++) x = MM_findObj(n, d.layers[i].document);
+            if (!x && d.getElementById) x = d.getElementById(n); return x;
+        }
+
+        function MM_swapImage() { //v3.0
+            var i, j = 0, x, a = MM_swapImage.arguments; document.MM_sr = new Array; for (i = 0; i < (a.length - 2); i += 3)
+                if ((x = MM_findObj(a[i])) != null) { document.MM_sr[j++] = x; if (!x.oSrc) x.oSrc = x.src; x.src = a[i + 2]; }
+        }
+
+    </script>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+
+<body background="/src/img/bg.png"
+    style="background-repeat:no-repeat;background-attachment:fixed;background-size:100% 100%;font-family: unifont; "
+    onLoad="MM_preloadImages('src/img/mainpage_button_on.png')">
+
+    <div class="bg">
+        <img id="welcome" src="./src/img/welcome.png"
+            style="width: 99.5%;height: 99%;position: absolute;z-index: 9999;">
+    </div>
+    <script>setTimeout(hideImage, 4000);</script>
+
+    <!--原谅我使用了已被废弃的center标签。但这是你逼我的，改了一堆style参数都没用-->
+    <div class="logo" align="center">
+        <!-- 该容器内动画效果触发时机为晚于启动图 -->
+        <center>
+
+            <img src="src/img/logo3.png" style="width:50%;height: 50%;margin-top: 7% ;z-index: 0; ">
+
+            <p style="font-size: 30px;color: aqua;margin-top: 6%;">现已支持 <img src="./src/img/mclogo.svg"
+                    style="height: 12%;width: 12%;"> 基岩版</p>
+
+            <p style="font-size: 20px;color: aliceblue;margin-top: 5%;">高速节点 | 超低延迟 | 反挂插件 | 纯净生存 | 支持成就</p>
+
+            <a href="main1.html" onMouseOut="MM_swapImgRestore()"
+                onMouseOver="MM_swapImage('Image3','','src/img/mainpage_button_on.png',1)"><img
+                    src="src/img/mainpage_button_off.png" alt="点击进入官网" width="300px" height="auto" id="Image3"
+                    style="margin-top: 6%;"></a>
+
+        </center>
+    </div>
+
+    <footer>
+
+    </footer>
+
+    </script>
+</body>
+
+</html>

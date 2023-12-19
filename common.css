@@ -1,0 +1,265 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #333;
+  font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+}
+
+ul,
+h1,
+h3,
+h4,
+p,
+dl,
+dd {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+i {
+  font-style: normal;
+}
+
+input {
+  outline: none;
+  padding: 0;
+  border: none;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: middle;
+}
+
+ul {
+  list-style: none;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+
+
+.wrapper {
+  width: 1240px;
+  margin: 0 auto;
+}
+
+.sprites {
+  background-size: 400px 400px;
+  background-repeat: no-repeat;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.tc {
+  text-align: center;
+}
+
+.green {
+  color: #27BA9B;
+}
+
+.red {
+  color: #CF4444;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+/* .fz20 {
+  font-size: 20px;
+}
+
+.fz18 {
+  font-size: 18px;
+}
+
+.fz16 {
+  font-size: 16px;
+} */
+
+.bread {
+  padding: 10px 0 25px 25px;
+}
+
+.bread a {
+  color: #999;
+  padding-right: 5px;
+}
+
+.bread a:hover {
+  color: #27BA9B;
+}
+
+.common-btn {
+  width: 180px;
+  height: 50px;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 48px;
+  font-size: 16px;
+  color: #FFFFFF;
+  display: inline-block;
+}
+
+.common-btn[type="primary"] {
+  background: #27BA9B;
+}
+
+.check {
+  color: #999;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.check i {
+  vertical-align: middle;
+}
+
+.check i.icon-yixuanze {
+  color: #27BA9B;
+  display: none;
+}
+
+.check i.icon-weixuanze {
+  color: #999;
+}
+
+.check span {
+  vertical-align: middle;
+}
+
+.check input {
+  display: none;
+}
+
+.check input:checked~span {
+  color: #27BA9B;
+}
+
+.check input:checked~i.icon-yixuanze {
+  display: inline-block;
+}
+
+.check input:checked~i.icon-weixuanze {
+  display: none;
+}
+
+/** 顶部导航 **/
+/* .topnav {
+  background-color: #333;
+} */
+
+.topnav .navs {
+  height: 53px;
+  text-align: right;
+  line-height: 53px;
+  font-size: 0;
+}
+
+.topnav .navs li {
+  display: inline-block;
+  font-size: 14px;
+}
+
+.topnav .navs li:last-child a {
+  border-right: none;
+}
+
+.topnav .navs .mobile {
+  display: inline-block;
+  width: 20px;
+  height: 16px;
+  position: relative;
+  top: 3px;
+  background-position: -160px -70px;
+}
+
+.topnav .navs a {
+  display: inline-block;
+  line-height: 1;
+  padding: 0 15px;
+  border-right: 2px solid black;
+  color: rgb(6, 68, 93);
+}
+
+.topnav .navs a:hover {
+  color: #27BA9B;
+}
+
+/** 主导航及Logo **/
+.header .wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.header .logo {
+  width: 200px;
+  height: 132px;
+  text-indent: -999px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 20px;
+}
+
+.header .navs {
+  padding-left: 50px;
+}
+
+.header .navs li {
+  line-height: 1;
+  font-size: 16px;
+  margin-right: 50px;
+  position: relative;
+  float: left;
+}
+
+.header .navs li:after {
+  content: '';
+  display: none;
+  width: 30px;
+  height: 2px;
+  background-color: #27BA9B;
+  position: absolute;
+  left: 1px;
+  bottom: -7px;
+}
+
+.header .navs li:hover a,
+.header .navs li.active a {
+  color: #27BA9B;
+}
+
+.header .navs li:hover:after,
+.header .navs li.active:after {
+  display: block;
+}
+
+.header .search {
+  height: 38px;
+  padding-left: 20px;
+}

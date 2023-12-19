@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280px, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
+    <title>萌樱MoeSakura·纯生存MC私服</title>
+    <link rel="stylesheet" href="bootstrap.css">
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333333;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            /* 修改为上对齐 */
+        /* padding: 0 0; */
+
+
+        */ .left {
+            flex: 1;
+            max-width: 50%;
+            padding-right: 50px;
+            display: flex;
+            /* 添加flex布局 */
+            flex-direction: column;
+            /* 设置为垂直方向 */
+        }
+
+        .left img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .right {
+            flex: 1;
+        }
+
+        footer {
+            background-color: #33333333;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .sever {
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+
+            .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                /* 修改为上对齐 */
+                padding: 50px;
+            }
+
+
+            footer {
+                background-color: #33333333;
+                color: #ffffff;
+                padding: 20px;
+                text-align: center;
+            }
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 20px;
+            padding: 0px;
+            overflow: hidden;
+            background-color: #fa95b31e;
+            font-size: 20px;
+
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: #EEF7DF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* li a:hover {
+            background-color: #fa95b39b;
+        } */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .slider {
+            width: 900px;
+            height: 550px;
+            overflow: hidden;
+        }
+
+        .slider-wrapper {
+            width: 100%;
+            height: 460px;
+        }
+
+        .slider-wrapper img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .slider-footer {
+            height: 80px;
+            background-color: rgb(100, 67, 68);
+            padding: 12px 12px 0 12px;
+            position: relative;
+        }
+
+        .slider-footer .toggle {
+            position: absolute;
+            right: 0;
+            top: 12px;
+            display: flex;
+        }
+
+        .slider-dooter .toggle button {
+            margin-right: 12px;
+            width: 28px;
+            height: 28px;
+            appearance: none;
+            border: none;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .slider-dooter .toggle button:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .slider-footer p {
+            margin: 0;
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .slider-indicator {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .slider-indicator li {
+            width: 8px;
+            height: 8px;
+            margin: 4px;
+            border-radius: 50%;
+            background: #fff;
+            opacity: 0.4;
+            cursor: pointer;
+        }
+
+        .slider-indicator li.active {
+            width: 12px;
+            height: 12px;
+            opacity: 1;
+        }
+
+        #navbarResponsive ul li a {
+            color: #b0b0b0;
+            font-size: 18px;
+        }
+
+        #navbarResponsive ul li a:hover {
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body style="font-family: unifont;width: 100%;min-width: 1200px;">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: black;height: 62px;">
+        <a id="harryPotter1" class="navbar-brand" href="#"
+            style="color: #69a3dc;font-size: 20px;font-family: algerian;"><img src="/img/book_and_pen.webp" width="30"
+                height="30" alt="">Freeeee
+            World</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive" style="height: 63px;">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="main1.html" style="margin-bottom: 20px;">HOMEPAGE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="playforum.html" style="margin-bottom: 20px;">Player Forum</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about_us.html" style="margin-bottom: 20px;color: white;">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login(1)(1).html" style="margin-bottom: 20px;">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="register01.html" style="margin-bottom: 20px;">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="游戏攻略-建筑.html" style="margin-bottom: 20px;">Player Guide</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="welcome.html">Welcome</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <!-- 该容器用于存放bgm与bgv及相关控制脚本 -->
+        <div class="bg" style="height: 100%;width: 100%;position:relative;">
+            <audio id="bgm" src="./src/media/bg.mp3" preload="auto" autoplay="autoplay" loop="loop"
+                style="display: none;"></audio>
+            <!-- video方案二（解决拖动浏览器边框后出现的白底问题） 202310161307启用-->
+            <!-- <video id="bgv" src="./src/media/bg.mp4" muted loop autoplay
+            style=" z-index: -9999; position: fixed;  right: 0px;  bottom: 0px;   min-width: 100%;  min-height: 100%;  height: auto;   width: auto; "></video> -->
+            <img src="img/2021欢乐暑假.jpg" alt=""
+                style="filter: blur(8px);z-index: -9999; position: fixed;  right: 0px;  bottom: 0px;   min-width: 100%;  min-height: 100%;  height: auto;   width: auto; ">
+            <script type="text/javascript">//bgm控制按钮
+                var btn = document.getElementById('bgmc')
+                var bgm = document.getElementById("bgm");
+                btn.onclick = function () {
+                    if (bgm.paused) {
+                        bgm.play();
+                    } else {
+                        bgm.pause();
+                    }
+                } 
+            </script>
+            <article id="sever">
+                <div class="title">
+                    <h1
+                        style=" color: black;margin-top: 8%; text-align: center;font-family: algerian;font-size: 102px;height: 102px;">
+                        About Us
+                    </h1>
+                </div>
+                </header>
+                <div>
+                    <div class="image">
+                        <center>
+
+                            <div class="slider ">
+                                <div class="slider-wrapper">
+                                    <img src="img/1_0e36b0d.webp" alt="" />
+                                </div>
+                                <div class="slider-footer">
+                                    <p>111</p>
+                                    <ul class="slider-indicator">
+                                        <li class="active"></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                    <div class="toggle">
+                                        <button class="prev">&lt;</button>
+                                        <button class="next">&gt;</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <script>
+
+                                const sliderData = [
+                                    { url: 'img/1_0e36b0d.webp', title: '12', color: 'rgb(100,67,68)' },
+                                    { url: 'img/2_503eb20.webp', title: '12', color: 'rgb(43,35,26)' },
+                                    { url: 'img/6_9014e47.webp', title: '12', color: 'rgb(36,31,33)' },
+                                    { url: 'img/7_a200cb5.webp', title: '12', color: 'rgb(53,29,25)' },
+                                    { url: 'img/8_94e29a4.webp', title: '12', color: 'rgb(166,131,143)' }
+                                ]
+                                //获取元素
+                                const img = document.querySelector('.slider-wrapper img')
+                                const p = document.querySelector('.slider-footer p')
+                                const footer = document.querySelector('.slider-footer')
+                                //1.右按钮业务
+                                //1.1 获取右侧按钮
+                                const next = document.querySelector('.next')
+                                let i = 0 //信号量 控制播放图片的张数
+                                //1.2 注册点击事件
+                                next.addEventListener('click', function () {
+                                    i++
+                                    //1.6 判断条件 如果大于8 就复原
+                                    if (i >= sliderData.length) {
+                                        i = 0
+                                    }
+                                    //1.3 得到对应的对象
+                                    //console.log(sliderData[i])
+                                    toggle()
+                                })
+                                //2.左按钮业务
+                                //2.1 获取右侧按钮
+                                const prev = document.querySelector('.prev')
+                                //2.2 注册点击事件
+                                prev.addEventListener('click', function () {
+                                    i--
+                                    //2.6 判断条件 如果小于0  就回到最后一张图片 索引号是7
+                                    if (i < 0) {
+                                        i = sliderData.length - 1
+                                    }
+                                    //1.3 得到对应的对象
+                                    //console.log(sliderData[i])
+                                    //调用函数
+                                    toggle()
+                                })
+                                //声明一个渲染的函数作为复用
+                                function toggle() {
+                                    img.src = sliderData[i].url
+                                    p.innerHTML = sliderData[i].title
+                                    footer.style.backgroundColor = sliderData[i].color
+                                    //1.5 更换小圆点
+                                    // 先删除以前的active
+                                    document.querySelector('.slider-indicator .active').classList.remove('active')
+                                    //只让当前li添加active
+                                    document.querySelector(`.slider-indicator li:nth-child(${i + 1})`).classList.add('active')
+
+                                }
+                                //3.自动播放模块
+                                let timerId = setInterval(function () {
+                                    //利用js自动调用点击事件 click()一定要加小括号调用函数
+                                    next.click()
+                                }, 1000)
+                                //4.鼠标经过大盒子 停止定时器
+                                const slider = document.querySelector('.slider')
+                                //注册事件
+                                slider.addEventListener('mouseenter', function () {
+                                    //停止定时器
+                                    clearInterval(timerId)
+                                })
+                                //5.鼠标离开大盒子 开启定时器
+                                slider.addEventListener('mouseleave', function () {
+                                    //停止定时器
+                                    clearInterval(timerId)
+                                    //开启定时器
+                                    timerId = setInterval(function () {
+                                        next.click()
+                                    }, 1000)
+                                })
+                            </script>
+                        </center>
+                    </div>
+
+                    <div class="passage"
+                        style="text-align: center; font-size: 22px;margin-left: 20%;margin-right: 20%;">
+                        <br>
+                        <!-- <p style="color: rgb(232, 222, 222);">欢迎来到 Minecraft 我的世界服务器！<br>
+
+                        我们是专注于提供高质量游戏服务器的团队。致力于为玩家打造一个充满创造力、社交互动和无限可能性的游戏环境。<br>
+
+                        我们的服务器拥有强大的硬件设施和稳定的网络连接，以确保您能够流畅地畅玩游戏。<br>
+
+                        我们提供多个游戏模式，包括生存、小游戏、家园系统等，以满足不同玩家的需求和喜好。<br>
+
+                        在我们的服务器中，您可以与朋友们一起建立庞大的城市、参与刺激的PVP对战、挑战各类怪物、参加精彩的活动等等。<br>
+
+                        您还可以加入我们的社区，结识来自世界各地的玩家，共同探索、合作和竞争！<br>
+
+                        祝您玩得开心！<br><br> -->
+                        <p style="color: black;font-family:Arial, Helvetica, sans-serif;font-size: 28px;">
+                            Welcome to the Minecraft world server!<br>
+
+                            We are a team dedicated to providing high-quality gaming servers. Our mission is to create a
+                            gaming environment filled with creativity, social interaction, and endless possibilities for
+                            players.<br>
+
+                            Our servers are equipped with powerful hardware and a stable network connection to ensure
+                            that
+                            you can enjoy the game smoothly.<br>
+
+                            We offer various game modes, including survival, mini-games, and a home system, to meet the
+                            needs and preferences of different players.<br>
+
+                            On our server, you can build massive cities with your friends, engage in thrilling PVP
+                            battles,
+                            face various monsters, and participate in exciting events.<br>
+
+                            You can also join our community, meet players from around the world, and explore, cooperate,
+                            and
+                            compete together!<br>
+
+                            Wishing you a great time playing!
+                        </p>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <footer>
+        <p style="color: white;">版权所有 &copy; 2023 萌樱服务器 | Copyrights &copy; 2023 MoeSakura</p>
+    </footer>
+    </article>
+    </div>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>论坛</title>
+
+  <!-- 引入 Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap.css">
+  <!-- 引入 jQuery -->
+  <script src="jquery-3.2.1.slim.min.js"></script>
+  <!-- 引入 Bootstrap JavaScript -->
+  <script src="bootstrap.bundle.min.js"></script>
+
+
+  <style>
+    body {
+      padding-top: 60px;
+      background-image: url('./src/img/bg.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+
+
+    #sendtime {
+      text-align: right;
+      color: gray;
+      font-size: 5px;
+      margin-top: -5%;
+    }
+
+    #navbarResponsive ul li a {
+      color: #b0b0b0;
+      font-size: 18px;
+    }
+
+    #navbarResponsive ul li a:hover {
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 导航栏 -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: rgb(9, 9, 9);;">
+    <a class="navbar-brand" href="#" style="color: #69a3dc; font-size: 20px;font-family: algerian;"><img
+        src="/img/book_and_pen.webp" width="30" height="30" alt="">Freeeee World</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="main1.html">Home Page</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="playforum.html" style="color: white;">Player Forum</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about_us.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login(1)(1).html">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="register01.html">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="游戏攻略-建筑.html">Player Guide</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="welcome.html">Welcome</a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+  <!-- 页面内容 -->
+  <div class="container">
+
+    <center>
+      <marquee style="height: 40%;width: 80%;">
+        <img src="https://pica.zhimg.com/80/v2-972564d9a0dae982f3fca1ba29c1e9e6_720w.webp?source=1940ef5c" width="720"
+          style="margin-top: 20px;">
+        <img src="https://pica.zhimg.com/80/v2-22d4b4aeba510a1456c51486d11d3d4c_1440w.webp?source=1940ef5c" width="720"
+          style="margin-top: 20px;">
+        <img src="https://pica.zhimg.com/80/v2-22d4b4aeba510a1456c51486d11d3d4c_1440w.webp?source=1940ef5c" width="720"
+          style="margin-top: 20px;">
+        <img src="https://pica.zhimg.com/80/v2-22d4b4aeba510a1456c51486d11d3d4c_1440w.webp?source=1940ef5c" width="720"
+          style="margin-top: 20px;">
+
+      </marquee>
+    </center>
+
+
+    <div class="row">
+      <!-- 帖子列表 -->
+      <div class="col-lg-8" id="list">
+
+        <!-- 一个帖子示例 -->
+        <div class="card my-4">
+          <h5 class="card-header">Sample Post Title_1</h5>
+          <div class="card-body">
+            <p>Post content</p>
+            <br>
+          </div>
+          <p class="card-footer" id="sendtime" style="margin-bottom: auto;">Posting time:2023-12-01 19:24</p>
+        </div>
+
+        <!-- 另一个帖子 -->
+        <div class="card my-4">
+          <h5 class="card-header">Sample Post Title_2</h5>
+          <div class="card-body">
+            <p>Post content</p>
+            <br>
+          </div>
+          <p class="card-footer" id="sendtime" style="margin-bottom: auto;">Posting time:2023-12-01 19:24</p>
+        </div>
+
+        <!-- 另一个帖子 -->
+        <div class="card my-4">
+          <h5 class="card-header">Sample Post Title_3</h5>
+          <div class="card-body">
+            <p>Post content</p>
+            <br>
+          </div>
+          <p class="card-footer" id="sendtime" style="margin-bottom: auto;">Posting time:2023-12-01 19:24</p>
+        </div>
+
+      </div>
+
+      <!-- 侧边栏 -->
+      <div class="col-lg-4">
+
+
+        <div class="card my-4 liuyan">
+          <h5 class="card-header">Post</h5>
+          <div class="card-body">
+            <form id="postForm">
+              <div class="form-group">
+                <p style="font-size: large">Title</p>
+                <input type="text" class="form-control" id="postTitle" placeholder="Please enter the post title">
+              </div>
+              <div class="form-group">
+                <p style="font-size: large">Content</p>
+                <textarea class="form-control" id="postContent" rows="3"
+                  placeholder="Please enter the content of the post"></textarea>
+              </div>
+              <button type="button" class="btn btn-primary" onclick="send_ok()">Send</button>
+
+              <script>//发帖成功后执行
+                function send_ok() {
+                  //插入新卡片
+                  var title = document.getElementById('postTitle').value;
+                  var content = document.getElementById('postContent').value;
+                  var newcard = '<div class="card my-4"><h5 class="card-header">' + title + '</h5><div class="card-body"><p>' + content + '</p><br></div><p class="card-footer" id="sendtime" style="margin-bottom: auto;"></p></div>';
+                  var container = document.getElementById('list');
+                  container.insertAdjacentHTML('afterbegin', newcard);
+                  alert('Posting successful!');
+
+                  var clickedTime = new Date();
+                  // 格式化日期与时间
+                  var formattedDateTime =
+                    clickedTime.getFullYear() + '-' +
+                    padZero(clickedTime.getMonth() + 1) + '-' +
+                    padZero(clickedTime.getDate()) + ' ' +
+                    padZero(clickedTime.getHours()) + ':' +
+                    padZero(clickedTime.getMinutes());
+                  // 将日期与时间写入 <p> 标签
+                  document.getElementById('sendtime').textContent = 'Posting time:' + formattedDateTime;
+                }
+                // 辅助函数：在单个数字前添加零，以确保两位数
+                function padZero(num) {
+                  return num < 10 ? '0' + num : num;
+                }
+              </script>
+            </form>
+          </div>
+        </div>
+
+        <div class="card my-4">
+          <h5 class="card-header">More content</h5>
+          <div class="card-body">
+            <ul>
+              <li><a href="https://mc.netease.com/">Freeeee World China Edition · Official Forum</a></li>
+              <li><a href="https://www.mcbbs.net/portal.php">Minecraft Chinese Forum</a></li>
+              <li>Contact customer service:95163815 | 95163816</li>
+            </ul>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

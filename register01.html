@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280px, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
+
+    <!-- link标签用于为网页添加标题图标 更新于2310172055 -->
+    <link rel="icon" href="./src/img/logo2.png" sizes="16x16">
+    <!-- <script src="jquery-3.2.1.slim.min.js"></script>
+
+    <script src="bootstrap.bundle.min.js"></script> -->
+
+    <title>萌樱MoeSakura·纯生存MC私服</title>
+    <!-- <script src="jquery-3.7.0.js"></script>
+    <script src="loginAndRegister.js"></script> -->
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="login(1).css">
+    <script src="jquery-3.7.0.js"></script>
+    <script src="loginAndRegister.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+    <style>
+        h1 {
+            font-size: 40px;
+            text-align: center;
+            margin-top: 3%;
+
+        }
+
+        .container {
+            /* width: 300px; */
+            margin: 0 auto;
+        }
+
+        @media(min-width:540px) {
+            h1 {
+                font-size: 50px;
+                text-shadow: 15px;
+            }
+
+            h2 {
+                font-size: 25px;
+            }
+        }
+
+        @media(min-width:960px) {
+            h1 {
+                font-size: 100px;
+                text-shadow: 30px;
+            }
+
+            h2 {
+                font-size: 50px;
+            }
+        }
+
+        #navbarResponsive ul li a {
+            color: #b0b0b0;
+            font-size: 18px;
+        }
+
+        #navbarResponsive ul li a:hover {
+            color: white;
+        }
+    </style>
+</head>
+
+
+<!-- 需要 unifont像素字 字体 -->
+
+<body style="font-family: unifont;width: 100%;" onLoad="MM_preloadImages('src/img/enter_on.png')">
+
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: rgb(9, 9, 9);">
+        <a class="navbar-brand" href="#" style="color: #69a3dc; font-size: 20px;font-family: algerian;"><img
+                src="/img/book_and_pen.webp" width="30" height="30" alt="">Freeeee World</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="main1.html">Homepage</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="playforum.html">Player Forum</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about_us.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login(1)(1).html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="register01.html" style="color: white;">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="游戏攻略-建筑.html">Player Guide</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="welcome.html">Welcome</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- 该容器用于存放bgm与bgv及相关控制脚本 -->
+    <div class="bg" style="height: 100%;width: 100%;position:relative;">
+        <audio id="bgm" src="./src/media/bg.mp3" preload="auto" autoplay="autoplay" loop="loop"
+            style="display: none;"></audio>
+        <!-- video方案一，由于对style参数的处理错误，已于202310161306版本弃用 -->
+        <!-- <video   src="./src/media/bg.mp4" muted="muted" loop="loop" autoplay="autoplay" style="object-fit: contain;position: absolute;top: -250px;left: -100px; width: 110%; z-index: -9999;"></video> -->
+
+        <!-- video方案二（解决拖动浏览器边框后出现的白底问题） 202310161307启用-->
+        <video id="bgv" src="./src/media/bg.mp4" muted loop autoplay
+            style="filter: blur(4px) ;z-index: -9999; position: fixed;  right: 0px;  bottom: 0px;   min-width: 100%;  min-height: 100%;  height: auto;   width: auto; "></video>
+
+        <script type="text/javascript">//bgm控制按钮
+            var btn = document.getElementById('bgmc')
+            var bgm = document.getElementById("bgm");
+            btn.onclick = function () {
+                if (bgm.paused) {
+                    bgm.play();
+                } else {
+                    bgm.pause();
+                }
+            }
+        </script>
+
+        <!-- <script type="text/javascript">
+            function getIP(json) {
+                navigator.clipboard.writeText(json.ip);
+                alert("欢迎回来！您的IP地址为 " + json.ip + " ,已复制到粘贴板！");
+            }  
+        </script> -->
+        <script type="text/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+
+        <div class="container">
+
+
+            <div class="row">
+                <div class="col-md-1 col-sm-0"></div>
+                <div class="col-md-10 col-sm-12">
+
+                    <h1 style="font-family:algerian;color: #69a3dc;margin-top: 10%;">
+                        Freeeee World!</h1>
+                    <h2 style="text-align: center;margin-bottom: 3%;size:30px;color: #69a3dc;font-family: algerian;">
+                        Register to server</h2>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+            <!-- 卡片 -->
+
+
+            <div class="row">
+                <form class="form" style="margin:0 auto;height: 482px;">
+                    <div class="box" style="width: 330px;">
+                        <div data-prop="username" class="form-item">
+                            <span class="iconfont icon-zhanghao"></span>
+                            <input name="username" id="username" type="text" placeholder="Set User Name">
+                            <span class="msg"></span>
+                        </div>
+                        <div data-prop="phone" class="form-item">
+                            <span class="iconfont icon-shouji"></span>
+                            <input name="phone" type="text" placeholder="Enter your phone number  ">
+                            <span class="msg"></span>
+                        </div>
+                        <div data-prop="code" class="form-item">
+                            <span class="iconfont icon-zhibiaozhushibiaozhu"></span>
+                            <input name="code" type="text" placeholder="SMS verification code">
+                            <span class="msg"></span>
+                            <a class="code" href="javascript:;" style="width:150px ;text-align: center;">发送验证码</a>
+                        </div>
+                        <div data-prop="password" class="form-item">
+                            <span class="iconfont icon-suo"></span>
+                            <input name="password" id="password" type="password"
+                                placeholder="Set a combination of 6 to 20 letters, numbers, and symbols">
+                            <span class="msg"></span>
+                        </div>
+                        <div data-prop="confirm" class="form-item">
+                            <span class="iconfont icon-suo"></span>
+                            <input name="confirmm" id="confirmm" type="password"
+                                placeholder="Please re-enter the password above">
+                            <span class="msg"></span>
+                        </div>
+                        <div class="form-item pl50">
+                            <input class="iconfont icon-queren" type="checkbox"
+                                style="width: 20px; float: left; margin-top: -15px; margin-right: 8px;">
+                            <div style="color: rgb(199, 186, 186);">Read and agree《用户服务协议》</div></input>
+                        </div>
+                        <div class="form-item">
+                            <!-- <button class="submit" onclick="Nect()"><a src="login(1)(1).html">Next</a></button> -->
+                            <button class="submit" type="button" onclick="checkregister()">Next</button>
+                            <!-- <a class="submit" src="login(1)(1).html">Next</a> -->
+                        </div>
+                </form>
+            </div>
+        </div>
+
+
+        <!-- <div class="extra" style="background-color: rgb(215, 239, 197);">
+      <p style="text-align: center;">&copy; debris</p>
+    </div> -->
+
+
+        <!-- <form class="login-form" action="./main.html">
+                <input type="text" id="nickname" name="nickname" placeholder="玩家昵称 | Player Nickname" value="Steve"
+                    required>
+                <br>
+                <input type="text" id="username" name="username" placeholder="Xbox用户名 | Xbox Username" required>
+                <br>
+                <input type="password" id="password" name="password" placeholder="服务器密码 | Password" required>
+                <br>
+                <input type="text" id="ip_address" name="ip_address" placeholder="请粘贴IP地址 | IP Address" required>
+                <br>
+                <input type="submit" value="点击登录 | Login">
+                <br>
+            </form> -->
+
+    </div>
+    </div>
+    <script>
+
+        var button = document.querySelector('.dl');
+        var countdown = document.querySelector('.countdown');
+        var usernameInput = document.querySelector('input[name="username"]');
+        var passwordInput = document.querySelector('input[name="password"]');
+        var confirmm = document.querySelector('input[name="confirmm"]');
+        var un = document.getElementById("username");
+        var pw = document.getElementById("password");
+        var pw2 = document.getElementById("confirmm");
+        function checkregister() {
+            if (un.value != "") {
+                if (pw.value === pw2.value) {
+                    fregister('username', 'password', '192.168.43.231:8000/register/');
+                    if (fcheck() == 6) {
+                        location.href = 'login(1)(1).html';
+                    } else if (fcheck() == 4) {
+                        alert("user has registed");
+                    } else {
+                        alert("wrong");
+                    }
+
+                } else {
+                    alert("Pleasse make it same");
+                }
+            } else {
+                alert("please input valid information");
+            }
+
+            return 0;
+        }
+        // if (button && countdown) {
+        //     button.addEventListener('click', function () {
+        //         var bcode;
+        //         flogin('username', 'password', '192.168.43.231:8000/register/');
+
+        //         if (fcheck() == 6) {
+        //             button.disabled = true; // Disable the button to prevent multiple clicks
+
+        //             let num = parseInt(countdown.innerText);
+        //             var timerId = setInterval(function () {
+        //                 num--;
+        //                 countdown.innerText = num;
+        //                 if (num === 0) {
+        //                     clearInterval(timerId);
+        //                     location.href = 'login(1)(1).html'; // Redirect to the login page
+        //                 }
+        //             }, 1000);
+        //         } else {
+        //             alert('no');
+        //         }
+        //     });
+        // }
+
+        // (function () {
+        //     // 1. 发送短信验证码模块
+        //     const code = document.querySelector('.code')
+        //     let flag = true  // 通过一个变量来控制   节流阀 
+        //     //  1.1 点击事件
+        //     code.addEventListener('click', function () {
+        //         if (flag) {
+        //             // 取反了，不能马上第二次点击
+        //             flag = false
+        //             let i = 5
+        //             // 点击完毕之后立马触发
+        //             code.innerHTML = `0${i}秒后重新获取`
+        //             // 开启定时器
+        //             let timerId = setInterval(function () {
+        //                 i--
+        //                 code.innerHTML = `0${i}秒后重新获取`
+        //                 if (i === 0) {
+        //                     // 清除定时器
+        //                     clearInterval(timerId)
+        //                     // 从新获取
+        //                     code.innerHTML = `重新获取`
+        //                     // 到时间了，可以开启 flag了
+        //                     flag = true
+        //                 }
+        //             }, 1000)
+        //         }
+        //     })
+        // })();
+
+        // 1. tab栏切换  事件委托
+        const tab_nav = document.querySelector('.tab-nav')
+        const pane = document.querySelectorAll('.tab-pane')
+        // 1.1 事件监听
+        tab_nav.addEventListener('click', function (e) {
+            if (e.target.tagName === 'A') {
+                // 取消上一个active
+                tab_nav.querySelector('.active').classList.remove('active')
+                // 当前元素添加active
+                e.target.classList.add('active')
+
+                // 先干掉所有人  for循环
+                for (let i = 0; i < pane.length; i++) {
+                    pane[i].style.display = 'none'
+                }
+                // 让对应序号的 大pane 显示 
+                pane[e.target.dataset.id].style.display = 'block'
+            }
+        })
+
+        // 点击提交模块
+        const form = document.querySelector('form')
+        const agree = document.querySelector('[name=agree]')
+        const username = document.querySelector('[name=username]')
+        form.addEventListener('submit', function (e) {
+            e.preventDefault()
+            // 判断是否勾选同意协议
+            if (!agree.checked) {
+                return alert('请勾选同意协议')
+            }
+        })
+
+        function jump() {
+            window.location.href = "login(1)(1).html";
+        }
+    </script>
+
+</body>
+
+</html>
